@@ -1,0 +1,51 @@
+﻿<Page x:Class="MonastyrevaBeautifulStydio.View.Pages.PeriodPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MonastyrevaBeautifulStydio.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PeriodPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="Выберите начало периода"/>
+            <DatePicker Name="DateSartDp"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="Выберите начало периода"/>
+            <DatePicker Name="DateStopDp"
+                        />
+        </StackPanel>
+        <DataGrid x:Name="DataLv" Grid.Row="1"
+                  Grid.ColumnSpan="2" AutoGenerateColumns="True">
+            
+                
+                    <!--<GridViewColumn Header="Дата" DisplayMemberBinding="{Binding Detalspol, StringFormat=dd/MM/yyyy}"/>
+                    <GridViewColumn Header="Сотрудник" DisplayMemberBinding="{Binding Sotrudnik.Name}"/>
+                    <GridViewColumn Header="Маткриал" DisplayMemberBinding="{Binding Material.Name}"/>
+                    <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Zena}"/>
+                    <GridViewColumn Header="Колличество" DisplayMemberBinding="{Binding Kolvo}"/>
+                    <GridViewColumn Header="Сумма" DisplayMemberBinding="{Binding Summa}"/>-->
+                
+            
+        </DataGrid>
+
+        <Button x:Name="OrgerByDateBtn"
+                Grid.ColumnSpan="2"
+                Grid.Row="2"
+                Content="Выбрать"
+                Margin="40 0"
+                Click="OrgerByDateBtn_Click"/>
+    </Grid>
+</Page>

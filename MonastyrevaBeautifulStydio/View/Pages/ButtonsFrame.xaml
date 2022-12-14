@@ -1,0 +1,16 @@
+﻿<Page x:Class="MonastyrevaBeautifulStydio.View.Pages.ButtonsFrame"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MonastyrevaBeautifulStydio.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="785" d:DesignWidth="217"
+      Title="ButtonsFrame">
+
+    <Grid Background="Transparent">
+        
+            <Button Margin="10 20" x:Name="OkBtn" Content="Ok" MinHeight="50" MinWidth="200"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="OkBtn_Click"/>
+        
+    </Grid>
+</Page>

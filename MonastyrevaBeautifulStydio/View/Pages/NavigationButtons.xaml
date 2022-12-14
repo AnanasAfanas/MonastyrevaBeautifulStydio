@@ -1,0 +1,26 @@
+﻿<Page x:Class="MonastyrevaBeautifulStydio.View.Pages.NavigationButtons"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MonastyrevaBeautifulStydio.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="785" d:DesignWidth="217"
+      Title="NavigationButtons">
+
+    <Grid>
+        <StackPanel>
+            <Button Margin="10 20" x:Name="UchetNavBtn" Content="Учет" MinHeight="50" MinWidth="200"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="UchetNavBtn_Click"/>
+            <Button Margin="10 20" x:Name="ProizvoditelNavBtn" Content="Производитель" MinHeight="50" MinWidth="200"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="ProizvoditelNavBtn_Click"/>
+            <Button Margin="10 20" x:Name="SotrudnikNavBtn" Content="Сотрудники" MinHeight="50" MinWidth="200"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="SotrudnikNavBtn_Click"/>
+            <Button Margin="10 20" x:Name="MaterialNavBtn" Content="Материалы" MinHeight="50" MinWidth="200"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="MaterialNavBtn_Click"/>
+            <Button Margin="10 20" x:Name="ListUchetNavBtn"  MinHeight="50" MinWidth="200"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="ListUchetNavBtn_Click" >
+                <TextBlock Text="Посмотреть список"
+                           TextWrapping="Wrap" 
+                           TextAlignment="Center"/>
+            </Button>
+            <Button Margin="10 20" x:Name="PerodNavBtn" Content="Выбранный период" MinHeight="50" MinWidth="200"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="PerodNavBtn_Click"/>
+            
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,100 @@
+﻿<Page x:Class="MonastyrevaBeautifulStydio.View.Pages.AddUchetPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MonastyrevaBeautifulStydio.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddUchetPage">
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="1*" />
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            
+        <TextBlock Text="введите дату" />
+        <DatePicker Name="SelectDateVidachiDp" Grid.Row="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                       Grid.Row="1"
+                    >
+
+
+            <TextBlock Text="Выберите струдника" 
+                       />
+            <ComboBox Grid.Row="3" MinWidth="300"
+                      x:Name="SontudnikCb">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <TextBlock Text="выберите производителя"/>
+            <ComboBox x:Name="ProizvoditelCb" MinWidth="240" SelectionChanged="ProizvoditelCb_SelectionChanged">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="3">
+            <TextBlock Text="выберите материал"/>
+            <ComboBox x:Name="MaterialCb" MinWidth="240">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2"
+                    Grid.Column="1">
+            <TextBlock Text="Введите цену"/>
+            <TextBox x:Name="PriceTb" MinHeight="30"/>
+            
+        </StackPanel>
+        <StackPanel Grid.Row="3"
+                    Grid.Column="1">
+            <TextBlock Text="введите количество"/>
+            <TextBox x:Name="CountTbl"
+                     MinHeight="30"/>
+        </StackPanel>
+        
+
+                   <Border
+             CornerRadius="200"
+                Grid.Row="5"
+                       >
+            <Button 
+                Name="AddUchetBtn"
+                Height="50"
+                
+                Click="AddUchetBtn_Click">
+                <Button.Content>
+                    <TextBlock Text="Добавить"/>    
+
+                </Button.Content>
+            </Button>
+                </Border>
+        
+        
+    </Grid>
+</Page>
